@@ -5,51 +5,60 @@ var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
   //Code Here
-
+first = (arr) => {
+  return arr[0];
+}
 
 //Next problem
-
-
 
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
 
-
   //Code Here
-
+last = (arr) => {
+  return arr[2];
+}
 
 //Next Problem
-
 
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
-
+  looper = (family) => {
+    for(var i = 0; i < family.length; i++){
+      alert(family[i]);
+    }
+  }
 
 //Next problem
-
-
 
 var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
-
+  reversedLooper = (letter) => {
+    for(i = letter.length -1; i >= 0; i--){
+      alert(letter[i]);
+    }
+      
+  }
 
 //Next Problem
-
 
 var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
-
-
-
-
-  
-
+evenFinder = (nums) => {
+  var evenArry = [];
+  for(i = 0; i < nums.length; i++){
+    if(nums[i] % 2 === 0){
+      evenArry.push(nums[i]);
+    }
+  }
+  return evenArry;
+};
 
 
 // =============================================
@@ -57,11 +66,6 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 // EXTRA PRACTICE PROBLEMS BELOW
 // =============================================
 // =============================================
-
-
-
-
-
 
 //Next problem
 
@@ -73,6 +77,22 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
+divider = (numbersArray) => {
+  var oddsOrEvens = [];
+  var evensArray = [];
+  var oddsArray = [];
+  for (i = 0; i < numbersArray.length; i++){
+      if (numbersArray[i] % 2 === 0){
+        evensArray.push(numbersArray[i]);
+      } else if (numbersArray[i] % 2 !== 0){
+        oddsArray.push(numbersArray[i]);
+      }
+  
+    }
+    oddsOrEvens.push(evensArray);
+    oddsOrEvens.push(oddsArray);
+    return oddsOrEvens;
+  }
 
 
 //Next Problem
